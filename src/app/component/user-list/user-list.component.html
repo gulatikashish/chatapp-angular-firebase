@@ -1,0 +1,9 @@
+<div class="feed">
+
+  <div *ngFor="let message of users" class="messages">
+
+    <p *ngIf="message.status=='online'" class="online">{{message.displayName}}</p>
+    <p *ngIf="message.status=='offline'">{{message.displayName}}</p>
+  </div>
+
+</div>

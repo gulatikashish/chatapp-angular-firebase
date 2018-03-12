@@ -1,0 +1,41 @@
+<div class="navBar">
+  <div id="logo"></div>
+  <div id="heading">
+    <a routerLink="/chat">GROUP CHAT</a>
+  </div>
+  <div class="Link">
+    <!-- {{loggedIn}} -->
+    <!-- <span>
+      <a *ngIf="!loggedIn" href="#" (click)="login()">Login </a>
+    </span> -->
+    <span>
+      <a *ngIf="!loggedIn" routerLink="/signup">Sign Up</a>
+    </span>
+    <span>
+      <span class="userEmail" *ngIf=" loggedIn">Hello {{userEmail}}</span>
+    </span>
+    <span class="logout">
+      <a *ngIf="loggedIn" href="#" (click)="logout()">Logout</a>
+    </span>
+  </div>
+
+</div>
+
+
+
+
+<!-- <nav class="navbar navbar-dark justify-content-between" *ngIf="loggedIn">
+  <logo>
+    <a class="navbar-brand" href="#">
+      <i class='fa fa-lock'></i> Group</a>
+  </logo>
+  <form class="form-inline">
+
+    <i class="fa fa-user-o"></i> {{ user.name }} |
+    <i class="fa fa-envelope-o"></i> {{user.email}} |
+    <a class="logout" (click)="logout()" href="javascript:void(0)">Logout</a>
+    |&nbsp;
+    <a (click)="show()">Change Password</a>
+  </form>
+</nav>
+<change-password></change-password> -->

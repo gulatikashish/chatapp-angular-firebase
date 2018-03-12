@@ -1,0 +1,19 @@
+<div class="messageContainer">
+  <!-- <p>{{displayName}}</p>
+  <p>{{timestamp}}</p>
+  <p>{{messageContent}}</p> -->
+  <div class="messageData">
+
+    <span *ngIf="isOwnMessage" class="isOwnSender">
+      me
+    </span>
+    <span *ngIf="!isOwnMessage" class="sender">
+      {{displayName}}
+    </span>
+    <span class="timestamp">
+      {{timeStamp | date:'medium'}}
+    </span>
+  </div>
+  <div class="messageContent" [innerHTML]="getInnerHTML(messageContent)">
+  </div>
+</div>

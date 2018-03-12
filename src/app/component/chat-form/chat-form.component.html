@@ -1,0 +1,12 @@
+<div>
+    <input class="chatInput" [(ngModel)]="message" (keydown)="handleSubmit($event)" />
+    <!-- <div class="image-upload">
+    <label for="file-input">
+        <img src="../icon.png" style="pointer-events: none" />
+    </label>
+
+    <input id="file-input" type="file" />
+</div> -->
+
+    <button class="chatButton" (click)=send()>Send</button>
+</div>
