@@ -21,9 +21,11 @@ import { UserItemComponent } from './component/user-item/user-item.component'
 import { appRoutes } from '../routes'
 import { AuthService } from './services/auth.service'
 import { ChatService } from './services/chat.service'
+import { MessagingService } from './services/messaging.service'
 import { environment } from '../environments/environment'
 import { HttpModule, JsonpModule } from '@angular/http'
 import { CanActivateDashboard, CanActivateHome } from '../app/services/authGuard.service'
+// import { PushNotificationsModule } from 'angular2-notifications'
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,9 +48,10 @@ import { CanActivateDashboard, CanActivateHome } from '../app/services/authGuard
     AngularFireAuthModule,
     EmojiPickerModule,
     HttpModule,
+    // PushNotificationsModule,
     NgxSlackModule.initializeApp('https://hooks.slack.com/services/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')
   ],
-  providers: [AuthService, ChatService, CanActivateDashboard, CanActivateHome],
+  providers: [AuthService, ChatService, CanActivateDashboard, CanActivateHome, MessagingService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

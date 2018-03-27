@@ -19,13 +19,9 @@ export class UserListComponent implements OnInit {
         this.loggedInEmail = user.email
       }
     })
-
     this.chatService.getUsers().subscribe(data => {
       this.users = data
-      console.log('useaaarsss', this.users)
-
       this.users.filter((data, i) => {
-        console.log('data', data, 'email', this.loggedInEmail)
         if (data.email === this.loggedInEmail) {
           this.users.splice(i, 1)
         }

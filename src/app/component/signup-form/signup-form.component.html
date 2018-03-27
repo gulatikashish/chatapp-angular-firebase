@@ -12,6 +12,11 @@
       <input type="displayName" name="displayName" placeholder="Enter a display Name.." [(ngModel)]="displayName" class="formInput"
         maxlength="12" required>
       <button [disabled]="!signupForm.form.valid" type="submit" (click)="signUp()" class="btn" id="btn-signUp">Sign Up</button>
+      <br>
+      <br>
+      <span>
+        <a class="right" routerLink="/">Login</a>
+      </span>
     </form>
   </div>
 </div>

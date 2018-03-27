@@ -35,12 +35,12 @@
   transition: ease-in 0.2s;
 }
 .userEmail {
-  padding-left: 500px;
+  /* padding-left: 500px; */
   font-weight: bold;
   /* text-align: right; */
 }
 .logout {
-  padding-left: 200px;
+  /* padding-left: 200px; */
   font-weight: bold;
   /* text-align: right; */
 }

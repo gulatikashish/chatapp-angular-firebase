@@ -19,7 +19,6 @@ export class ChatroomComponent implements OnInit, AfterViewChecked {
   }
   ngOnInit() {
     this.loggedId = this.authService.getUser()
-    console.log('===LOGGED ID', this.loggedId.id)
     this.authService.setUserStatus(this.loggedId.id, 'online')
   }
 }

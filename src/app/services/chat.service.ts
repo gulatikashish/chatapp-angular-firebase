@@ -32,6 +32,7 @@ export class ChatService {
     return this.db.list('users').valueChanges()
   }
   sendMessage(msg: string) {
+    const userId = this.user.uid
     const timestamp = this.getTimestamp()
     // const email = this.user.email
     this.chatMessages = this.getMessage()
@@ -45,7 +46,8 @@ export class ChatService {
       message: msg,
       timeSent: timestamp,
       displayName: this.displayName,
-      email: this.user.email
+      email: this.user.email,
+      userId: userId
     })
   }
   getMessages() {

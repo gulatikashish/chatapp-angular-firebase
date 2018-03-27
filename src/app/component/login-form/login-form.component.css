@@ -61,3 +61,7 @@ a {
 .label {
   font-size: 0.9em;
 }
+.right {
+  text-align: right;
+  float: right;
+}

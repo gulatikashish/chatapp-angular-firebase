@@ -37,7 +37,6 @@ export class MessageComponent implements OnInit {
     this.userEmail = ChatMessage.email
     this.displayName = ChatMessage.displayName
     this.userData = this.authService.getUser()
-    console.log('-===========================--', this.userData.id)
     if (this.userData.email === this.userEmail) {
       this.isOwnMessage = true
     }

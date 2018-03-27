@@ -2,6 +2,7 @@
   "name": "group chat",
   "short_name": "app",
   "start_url": "/",
+  "gcm_sender_id": "103953800507",
   "display": "browser",
   "background_color": "#2196F3",
   "description": "a group chat app.",
